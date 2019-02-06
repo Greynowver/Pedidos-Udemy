@@ -27,7 +27,7 @@ public class Program {
 		System.out.println("Email: ");
 		String email = sc.nextLine();
 		System.out.println("Birth Date (DD/MM/YYYY): ");
-		Date nasc = sdf1.parse(sc.next());
+		Date nasc = sdf1.parse(sc.nextLine());
 		
 		Client client = new Client(name, email, nasc);
 		
@@ -41,11 +41,13 @@ public class Program {
 		int itens = sc.nextInt();
 		
 		for (int i=1; i<=itens; i++) {
+			
 			System.out.println("Enter #" + i + " item data: ");
 			System.out.println("Product name: ");
+			sc.nextLine();
 			String nameProduct = sc.nextLine();
 			System.out.println("Product price: ");
-			Double priceProduct = sc.nextDouble();
+			double priceProduct = sc.nextDouble();
 			
 			Product product = new Product(nameProduct, priceProduct);
 			

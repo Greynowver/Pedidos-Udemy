@@ -9,7 +9,7 @@ public class Client {
 	private String email;
 	private Date birthDate;
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
 	
 	public Client() {
 	}
@@ -44,7 +44,10 @@ public class Client {
 		this.birthDate = birthDate;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return name +" (" +sdf1.format(birthDate) + ") - " + email;
+	}
 	
 	
 }
